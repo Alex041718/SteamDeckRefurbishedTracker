@@ -23,7 +23,10 @@ async function sendEmail(count) {
 
 async function checkOutOfStock() {
     const url = 'https://store.steampowered.com/sale/steamdeckrefurbished';
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ 
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
 
     try {
