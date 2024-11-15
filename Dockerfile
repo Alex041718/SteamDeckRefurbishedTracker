@@ -1,5 +1,5 @@
 
-FROM node:16-slim
+FROM node:18
 
 # Installation des dépendances pour Puppeteer
 RUN apt-get update \
