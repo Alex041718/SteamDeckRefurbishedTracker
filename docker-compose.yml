@@ -1,0 +1,10 @@
+
+version: '3'
+services:
+  steamdeck-checker:
+    build: .
+    volumes:
+      - ./screenshots:/app/screenshots
+    restart: always
+    environment:
+      - NODE_ENV=production
